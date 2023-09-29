@@ -9,7 +9,7 @@ DATE_COLUMN = 'date/time'
 DATA_URL = os.getenv('UBER_DATA_URL') # <- define a variável DATA_URL
 
 @st.cache_data # <- define o cache para os dados
-def load_data(nrows): # <- função para carregar os dados
+def load_data(nrows): # <- função para carregar os dadosz
     data = pd.read_csv(DATA_URL, nrows=nrows)
     lowercase = lambda x: str(x).lower() 
     data.rename(lowercase, axis='columns', inplace=True) 
